@@ -101,19 +101,18 @@ jacoco {
 
 tasks {
 
-//  // Test coverage reporting
-//  jacocoTestReport {
-//      // Enable xml for coveralls.
-//      reports {
-//          html.isEnabled = true
-//          xml.isEnabled = true
-//          csv.isEnabled = false
-//          xml.destination = file("${buildDir}/reports/jacoco/test/jacocoTestReport.xml")
-//          html.destination = file("${buildDir}/reports/jacoco/html/jacocoTestReport.html")
-//      }
-//  }
+  // Test coverage reporting
+  jacocoTestReport {
+      // Enable xml for coveralls.
+      reports {
+          html.isEnabled = true
+          xml.isEnabled = true
+          csv.isEnabled = false
+          xml.destination = file("${buildDir}/reports/jacoco/test/jacocoTestReport.xml")
+          html.destination = file("${buildDir}/reports/jacoco/html/jacocoTestReport.html")
+      }
+  }
 }
-
 
 //coveralls {
 //    sourceDirs += ['src/main/kotlin']
