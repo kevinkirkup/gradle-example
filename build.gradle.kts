@@ -56,7 +56,6 @@ dependencies {
     //testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 
     // JUnit 5
-    testImplementation("org.junit.jupiter:junit-jupiter-api:${ext["junit_version"]}")
     testRuntime("org.junit.jupiter:junit-jupiter-engine:${ext["junit_version"]}")
 
     // Spek2
