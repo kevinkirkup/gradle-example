@@ -50,7 +50,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${ext["kotlin_version"]}")
 
     // Use the Kotlin test library
-    //testImplementation("org.jetbrains.kotlin:kotlin-test")
+    testImplementation("org.jetbrains.kotlin:kotlin-test")
 
     // Use the Kotlin JUnit integration
     //testImplementation("org.jetbrains.kotlin:kotlin-test-junit")

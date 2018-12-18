@@ -4,14 +4,14 @@
 package basic.demo
 
 //import kotlin.test.Test
-//import kotlin.test.assertNotNull
+import kotlin.test.assertTrue
+import kotlin.test.assertNotNull
 
 import com.nhaarman.mockitokotlin2.*
 import com.nhaarman.expect.expect
 
 import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.specification.describe
-import org.junit.jupiter.api.Assertions as test
 
 object AppSpec: Spek({
 
@@ -20,11 +20,11 @@ object AppSpec: Spek({
     val classUnderTest by memoized { App() }
 
     it("should pass") {
-        test.assertTrue(true)
+        assertTrue(true)
     }
 
     it("should have a greeting") {
-        test.assertNotNull(classUnderTest.greeting)
+        assertNotNull(classUnderTest.greeting)
     }
   }
 })
