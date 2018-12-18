@@ -7,6 +7,7 @@
 ext["spek_version"] = "2.0.0-rc.1"
 ext["junit_version"] = "5.2.0"
 ext["kotlin_version"] = "1.3.11"
+ext["mockito_version"] = "2.0.0"
 
 plugins {
 
@@ -52,9 +53,11 @@ dependencies {
     // Use the Kotlin JUnit integration
     //testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 
+    // JUnit 5
     testCompile("org.junit.jupiter:junit-jupiter-api:${ext["junit_version"]}")
     testRuntime("org.junit.jupiter:junit-jupiter-engine:${ext["junit_version"]}")
 
+    // Spek2
     testImplementation("org.spekframework.spek2:spek-dsl-jvm:${ext["spek_version"]}") {
         exclude(group = "org.jetbrains.kotlin")
     }
@@ -65,6 +68,10 @@ dependencies {
 
     // spek requires kotlin-reflect, can be omitted if already in the classpath
     testRuntimeOnly("org.jetbrains.kotlin:kotlin-reflect:${ext["kotlin_version"]}")
+
+    // Mockito-Kotlin
+    testCompile("com.nhaarman.mockitokotlin2:mockito-kotlin:${ext["mockito_version"]}")
+    testImplementation("com.nhaarman.mockitokotlin2:mockito-kotlin:${ext["mockito_version"]}")
 
 }
 
