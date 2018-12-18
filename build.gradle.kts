@@ -7,7 +7,9 @@
 ext["spek_version"] = "2.0.0-rc.1"
 ext["junit_version"] = "5.2.0"
 ext["kotlin_version"] = "1.3.11"
-ext["mockito_version"] = "2.0.0"
+ext["mockito_kotlin_version"] = "2.0.0"
+ext["mockito_version"] = "2.23.4"
+ext["expect_version"] = "1.0.1"
 
 plugins {
 
@@ -69,9 +71,15 @@ dependencies {
     // spek requires kotlin-reflect, can be omitted if already in the classpath
     testRuntimeOnly("org.jetbrains.kotlin:kotlin-reflect:${ext["kotlin_version"]}")
 
+    // Mockito
+    testCompile("org.mockito:mockito-core:${ext["mockito_version"]}")
+
     // Mockito-Kotlin
-    testCompile("com.nhaarman.mockitokotlin2:mockito-kotlin:${ext["mockito_version"]}")
-    testImplementation("com.nhaarman.mockitokotlin2:mockito-kotlin:${ext["mockito_version"]}")
+    testCompile("com.nhaarman.mockitokotlin2:mockito-kotlin:${ext["mockito_kotlin_version"]}")
+    testImplementation("com.nhaarman.mockitokotlin2:mockito-kotlin:${ext["mockito_kotlin_version"]}")
+
+    // expect.kt
+    testCompile("com.nhaarman:expect.kt:${ext["expect_version"]}")
 
 }
 

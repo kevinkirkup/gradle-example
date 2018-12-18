@@ -6,6 +6,9 @@ package basic.demo
 //import kotlin.test.Test
 //import kotlin.test.assertNotNull
 
+import com.nhaarman.mockitokotlin2.*
+import com.nhaarman.expect.expect
+
 import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.specification.describe
 import org.junit.jupiter.api.Assertions as test
