@@ -56,7 +56,7 @@ dependencies {
     //testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 
     // JUnit 5
-    testCompile("org.junit.jupiter:junit-jupiter-api:${ext["junit_version"]}")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${ext["junit_version"]}")
     testRuntime("org.junit.jupiter:junit-jupiter-engine:${ext["junit_version"]}")
 
     // Spek2
@@ -72,14 +72,13 @@ dependencies {
     testRuntimeOnly("org.jetbrains.kotlin:kotlin-reflect:${ext["kotlin_version"]}")
 
     // Mockito
-    testCompile("org.mockito:mockito-core:${ext["mockito_version"]}")
+    testImplementation("org.mockito:mockito-core:${ext["mockito_version"]}")
 
     // Mockito-Kotlin
-    testCompile("com.nhaarman.mockitokotlin2:mockito-kotlin:${ext["mockito_kotlin_version"]}")
     testImplementation("com.nhaarman.mockitokotlin2:mockito-kotlin:${ext["mockito_kotlin_version"]}")
 
     // expect.kt
-    testCompile("com.nhaarman:expect.kt:${ext["expect_version"]}")
+    testImplementation("com.nhaarman:expect.kt:${ext["expect_version"]}")
 
 }
 
