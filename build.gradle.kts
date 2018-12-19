@@ -3,6 +3,7 @@
  *
  * This generated file contains a sample Kotlin application project to get you started.
  */
+import org.gradle.jvm.tasks.Jar
 
 ext["spek_version"] = "2.0.0-rc.1"
 ext["junit_version"] = "5.2.0"
@@ -21,6 +22,9 @@ plugins {
 
     // Apply the Kotlin JVM plugin to add support for Kotlin on the JVM
     id("org.jetbrains.kotlin.jvm").version("1.3.11")
+
+    // Documentation
+    id ("org.jetbrains.dokka").version("0.9.17")
 
 }
 
@@ -110,5 +114,16 @@ tasks {
           html.destination = file("${buildDir}/reports/jacoco/html/jacocoTestReport.html")
       }
   }
+
+  dokka {
+    outputFormat = "html"
+    outputDirectory = "${buildDir}/javadoc"
+  }
 }
 
+val dokkaJar by tasks.creating(Jar::class) {
+  group = JavaBasePlugin.DOCUMENTATION_GROUP
+  description = "Assembles Kotlin docs with Dokka"
+  classifier = "javadoc"
+  from(tasks.dokka)
+}
