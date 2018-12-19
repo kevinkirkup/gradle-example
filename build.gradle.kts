@@ -22,8 +22,6 @@ plugins {
     // Apply the Kotlin JVM plugin to add support for Kotlin on the JVM
     id("org.jetbrains.kotlin.jvm").version("1.3.11")
 
-    // Upload jacoco coverage reports to coveralls
-    // id("com.github.kt3k.coveralls").version("2.8.2")
 }
 
 application {
@@ -114,7 +112,3 @@ tasks {
   }
 }
 
-//coveralls {
-//    sourceDirs += ['src/main/kotlin']
-//    jacocoReportPath = 'build/reports/jacoco/test/jacocoTestReport.xml'
-//}
